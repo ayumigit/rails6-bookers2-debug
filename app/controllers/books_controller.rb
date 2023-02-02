@@ -8,12 +8,15 @@ class BooksController < ApplicationController
     @user = current_user
     @book_new = Book.new
     @book_user = User.find(@book.user_id)
+    @book_comment = BookComment.new
   end
 
   def index
     @book = Book.new
     @books = Book.all
     @user = current_user
+    @book_comment = BookComment.new
+
 
   end
 
