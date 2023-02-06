@@ -4,7 +4,6 @@ class SearchesController < ApplicationController
   def search
     @range = params[:range]
     @word = params[:word]
-    @book = Book.new
     @user = current_user
 
     if @range == "User"
